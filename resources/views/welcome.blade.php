@@ -101,11 +101,9 @@
                   <!--begin::Message-->
                   <div class="d-flex">
                     <div class="flex-shrink-0">
-                      <img
-                        src="../../dist/assets/img/user1-128x128.jpg"
-                        alt="User Avatar"
-                        class="img-size-50 rounded-circle me-3"
-                      />
+                      <img src="{{ Vite::asset('resources/images/user1-128x128.jpg') }}"
+                      alt="User Avatar"
+                      class="img-size-50 rounded-circle me-3">
                     </div>
                     <div class="flex-grow-1">
                       <h3 class="dropdown-item-title">
@@ -128,7 +126,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../../dist/assets/img/user8-128x128.jpg"
+                        src="{{ Vite::asset('resources/images/user8-128x128.jpg') }}"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -154,7 +152,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../../dist/assets/img/user3-128x128.jpg"
+                        src="{{ Vite::asset('resources/images/user3-128x128.jpg') }}"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -219,7 +217,7 @@
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../../dist/assets/img/user2-160x160.jpg"
+                  src="{{ Vite::asset('resources/images/user2-160x160.jpg') }}"
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
@@ -273,9 +271,9 @@
           <a href="./index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../../dist/assets/img/AdminLTELogo.png"
-              alt="AdminLTE Logo"
-              class="brand-image opacity-75 shadow"
+             src="{{ Vite::asset("resources/images/AdminLTELogo.png") }}"
+             alt="AdminLTE Logo"
+             class="brand-image opacity-75 shadow"
             />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
@@ -908,7 +906,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../../dist/assets/img/user1-128x128.jpg"
+                          src="{{  Vite::asset('resources/images/user1-128x128.jpg')}}"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -927,7 +925,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../../dist/assets/img/user3-128x128.jpg"
+                          src="{{  Vite::asset('resources/images/user3-128x128.jpg')}}"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -944,7 +942,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../../dist/assets/img/user1-128x128.jpg"
+                          src="{{  Vite::asset('resources/images/user1-128x128.jpg')}}"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
@@ -963,7 +961,7 @@
                         <!-- /.direct-chat-infos -->
                         <img
                           class="direct-chat-img"
-                          src="../../dist/assets/img/user3-128x128.jpg"
+                          src="{{  Vite::asset('resources/images/user3-128x128.jpg')}}"
                           alt="message user image"
                         />
                         <!-- /.direct-chat-img -->
