@@ -28,7 +28,7 @@
         </div>
           <!--begin::Row-->
           <div class="d-grid gap-2">
-            <button type="submit" class="btn btn-primary">Sign In</button>
+            <button type="submit" class="btn btn-primary">Login</button>
           </div>
         </form>
         <div class="mt-2 text-center">
