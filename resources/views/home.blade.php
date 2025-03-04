@@ -1,6 +1,6 @@
 @extends('layouts.default')
 
-@section('Content')
+@section('content')
 <div class="row">
     <!--begin::Col-->
     <div class="col-lg-3 col-6">

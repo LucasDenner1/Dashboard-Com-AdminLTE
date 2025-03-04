@@ -45,7 +45,7 @@
         </div>
         <div class="app-content">
           <div class="container-fluid">
-            @yield('Content')
+            @yield('content')
           </div>
         </div>
       </main>
