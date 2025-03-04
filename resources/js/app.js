@@ -5,3 +5,4 @@ import.meta.glob([
 
 import 'admin-lte';
 import './OverlayScrollbars'
+import 'bootstrap'
