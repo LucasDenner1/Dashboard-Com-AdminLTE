@@ -10,6 +10,11 @@
     <div class="card">
       <div class="card-body login-card-body">
         <p class="login-box-msg">Email recovery</p>
+        @session('status')
+        <div class="alert alert-success" role="alert" >
+            {{ $value }}
+        </div>
+        @endsession
         <form action="{{ route('password.email') }}" method="post">
             @csrf
           <div class="input-group mb-3">
