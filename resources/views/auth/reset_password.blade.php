@@ -4,11 +4,10 @@
 @section('content')
 <div class="register-box">
     <div class="register-logo">
-      <a href="../index2.html"><b>Admin</b>LTE</a>
+      <a href="{{ route('login') }}"><b>Admin</b>LTE</a>
     </div>
     <div class="card">
       <div class="card-body register-card-body">
-        <p class="register-box-msg">Register a new membership</p>
         <form action="{{ route('password.update') }}" method="post">
             @csrf
             <input type="hidden" name="token" value="{{ request()->token }}">
@@ -28,7 +27,7 @@
         </div>
           <div class="input-group mb-3">
               <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
-            <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation" />
+            <input type="password" name="password_confirmation" class="form-control" placeholder="New Password" />
           </div>
           <div class="d-grid gap-2">
             <button type="submit" class="btn btn-primary">Reset Password</button>
