@@ -30,8 +30,12 @@
           <th scope="col">{{ $user->name }}</th>
           <th scope="col">{{ $user->email }}</th>
           <td>
-            <a href="" class="btn btn-primary btn-sm">Editar</a>
-            <a href="" class="btn btn-danger btn-sm">Excluir</a>
+            <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary btn-sm">Editar</a>
+            <form action="{{ route('user.destroy', $user->id) }}" method="POST">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger btn-sm" >Excluir</button>
+            </form>
           </td>
         </tr>
         @endforeach

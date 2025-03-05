@@ -50,4 +50,11 @@ class UserController extends Controller
         ->with('status','Usuário Editado com sucesso!');
 
     }
+
+    public function destroy(User $user){
+        $user->delete();
+
+        return back()
+        ->with('status','Usuário Deletado com sucesso!');
+    }
 }
