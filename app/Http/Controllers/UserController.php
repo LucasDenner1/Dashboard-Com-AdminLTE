@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\UserProfile;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -37,7 +38,7 @@ class UserController extends Controller
     }
 
     public function update(User $user, Request $request){
-
+        $user->load('profile');
         $input = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -49,6 +50,21 @@ class UserController extends Controller
         return back()
         ->with('status','Usuário Editado com sucesso!');
 
+    }
+
+    public function updateProfile(User $user, Request $request){
+
+        $input = $request->validate([
+            'type' => 'required',
+            'address' => 'nullable'
+        ]);
+
+        UserProfile::updateOrCreate([
+            'user_id' => $user->id
+        ],$input);
+
+        return back()
+        ->with('status','Usuário Deletado com sucesso!');
     }
 
     public function destroy(User $user){
