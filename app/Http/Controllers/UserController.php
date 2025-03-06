@@ -38,7 +38,7 @@ class UserController extends Controller
     }
 
     public function update(User $user, Request $request){
-        $user->load('profile');
+        $user->load(['profile','interests']);
         $input = $request->validate([
             'name' => 'required',
             'email' => 'required|email',
@@ -48,7 +48,7 @@ class UserController extends Controller
         $user->save();
 
         return back()
-        ->with('status','Usuário Editado com sucesso!');
+        ->with('status','Usuário editado com sucesso!');
 
     }
 
@@ -63,14 +63,28 @@ class UserController extends Controller
             'user_id' => $user->id
         ],$input);
 
-        return back()
-        ->with('status','Usuário Deletado com sucesso!');
+        return back()->with('status','Usuário editado com sucesso!');
+    }
+
+    public function updateInterests(User $user, Request $request){
+
+        $input = $request->validate([
+            'interests' => 'nullable|array'
+        ]);
+
+        $user->interests()->delete();
+
+        if(!empty($input['interests'])){
+            $user->interests()->createMany($input['interests']);
+        }
+
+        return back()->with('status','Usuário editado com sucesso!');
     }
 
     public function destroy(User $user){
         $user->delete();
 
         return back()
-        ->with('status','Usuário Deletado com sucesso!');
+        ->with('status','Usuário deletado com sucesso!');
     }
 }

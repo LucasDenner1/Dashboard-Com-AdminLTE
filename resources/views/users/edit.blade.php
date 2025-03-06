@@ -10,7 +10,11 @@
         </div>
 @endsession
 
+
 @include('users.parts.base-details')
 <br>
 @include('users.parts.profile')
+<br>
+@include('users.parts.interests')
+
 @endsection

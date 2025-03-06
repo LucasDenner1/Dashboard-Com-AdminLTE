@@ -10,7 +10,7 @@
             <label lass="form-label">Tipo de Pessoa</label>
             <select name="type" class="form-control @error('type') is-invalid @enderror">
                 @foreach(['PF','PJ'] as $type)
-                <option value="{{ $type }}" 
+                <option value="{{ $type }}"
                 @selected(old('type')=== $type || $user?->profile?->type === $type)
                 >{{ $type }}</option>
                 @endforeach
