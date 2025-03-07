@@ -3,8 +3,9 @@
         @csrf
         @method('PUT')
     <div class="card-header">
-        Cargos
+        <h5 class="fw-bold text-primary mb-0">Gerenciar Cargos</h5>
     </div>
+
     <div class="card-body">
         @foreach ($roles as $role )
         <div class="form-check">

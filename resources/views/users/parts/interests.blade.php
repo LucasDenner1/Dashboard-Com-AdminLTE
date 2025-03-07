@@ -3,7 +3,7 @@
         @csrf
         @method('PUT')
     <div class="card-header">
-        Interesses
+        <h5 class="fw-bold text-primary mb-0">Interesses do Usuário</h5>
     </div>
     <div class="card-body">
         @foreach (['Anime','Series','Doramas'] as $item )
