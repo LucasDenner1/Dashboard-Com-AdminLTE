@@ -9,9 +9,10 @@
             {{ $value }}
         </div>
 @endsession
-
+@can('updateRoles', \App\Models\User::class)
 @include('users.parts.roles')
 <br>
+@endcan
 @include('users.parts.base-details')
 <br>
 @include('users.parts.profile')

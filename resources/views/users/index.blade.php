@@ -3,7 +3,9 @@
 @section('page-title', 'Usuários')
 
 @section('page-actions')
-    <a href="{{ route('users.create') }}" class="btn btn-primary">Adicionar</a>
+    @can('edit', \App\Models\User::class)
+        <a href="{{ route('users.create') }}" class="btn btn-primary">Adicionar</a>
+    @endcan
 @endsection
 
 @section('content')
@@ -41,12 +43,18 @@
             <td>{{ $user->email }}</td>
             <td class="text-center">
                 <div class="d-flex justify-content-center gap-2">
+
+                    @can('edit', \App\Models\User::class)
                     <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary btn-sm">Editar</a>
+                    @endcan
+
+                    @can('destroy', \App\Models\User::class)
                     <form action="{{ route('user.destroy', $user->id) }}" method="POST">
                         @method('DELETE')
                         @csrf
                         <button type="submit" class="btn btn-danger btn-sm">Excluir</button>
                     </form>
+                    @endcan
                 </div>
             </td>
         </tr>
